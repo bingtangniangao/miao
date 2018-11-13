@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div{
+      width:200px;
+      /* height:200px; */
+      border:1px solid red;
+      margin-left:auto;
+      margin-right:auto;
+      vertical-align:top;
+      /* margin-left:-50px;
+          margin-right:-50px;
+        */
+    }
+    section{
+      height: 200px;
+    }
+    section:hover {
+      border:1px solid red;
+      padding:10px;
+          margin-left:-50px;
+          margin-right:-50px;
+       
+    }
+  </style>
+</head>
+<body>
+<div>
+  <section>::before和::after下特有的content，用于在css渲染中向元素逻辑上的头部或尾部添加内容。
+
+      这些添加不会出现在DOM中，不会改变文档内容，不可复制，仅仅是在css渲染层加入。
+      
+      所以不要用:before或:after展示有实际意义的内容，尽量使用它们显示修饰性内容，例如图标。
+      
+      举例：网站有些联系电话，希望在它们前加一个icon☎，就可以使用:before伪元素，如下：
+    </section>
+</div>
+</body>
+</html>
