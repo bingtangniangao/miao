@@ -1,0 +1,32 @@
+html{
+  height:100%
+}
+body{
+  margin: 0;
+  height:100%
+}
+table{
+  /* width: 960px; 该为流体 表格会随着变大而大*/
+  width:100%;
+  margin: 0 auto;
+  border-spacing: 0px;
+  /* 边距为0 */
+  border-collapse: collapse;
+}
+.header{
+  height:120px;
+  background-color:olive;
+}
+.aside{
+  /* height: 500px; */
+  height:calc(100% - 120px);
+  /* width: 200px; */
+  width:20%;
+  background-color: purple;
+}
+.section{
+  /* width: 760px; */
+  width:80%;
+  height:calc(100% - 120px);
+  background-color: maroon;
+}
