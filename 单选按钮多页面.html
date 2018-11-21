@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    img{
+      width: 100%;
+      /* 相对于父元素100% 不然会超出,有滚动条 */
+        /* display: none; */
+      /* 隐藏因为图片挨在标签,回出现换行 */
+      position:absolute;
+      right:100%;
+     /* left:100%; */
+    /* rigth 和 left 的区别 left 有滚动条,而 right 没有 */
+      
+      top:50PX;
+    }
+    input{
+      zoom: 2;
+    }
+    input[type="radio"]:checked + img{
+      /* display:block; 显示 */ 
+     
+     right:0;
+      /* left:0; */
+    }
+  </style>
+</head>
+<body>
+  <input type="radio" name="foo">
+  <img src="https://i1.mifile.cn/a4/xmad_15427030673006_kxsPA.jpg" alt="">
+  <input type="radio" name="foo">
+  <img src="https://i1.mifile.cn/a4/xmad_15425931208271_yKAHi.jpg" alt="">
+</body>
+</html>

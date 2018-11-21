@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,7 @@
   height:100%;
   margin: 0;
 }
-.wrapper{
+/*.wrapper{
   height: 100%;
   position: relative;
 }
@@ -18,7 +18,7 @@
   height: 100%;
 width:20%;
 border-right:1px solid;
-box-sizing:border-box;
+box-sizing:border-box; 
 }
 .a1{
   position: absolute;
@@ -34,13 +34,11 @@ box-sizing:border-box;
 }
 .a3{
 
-
   position: absolute;
   top:0;
   left: 60%
 }
 .a4{
-
 
 position: absolute;
 top:0;
@@ -48,16 +46,32 @@ right: 0;
 }
 .a2 h1{height:80px;background-color: rgb(17, 185, 163);
 margin: 0;}
-.a2 main{height:calc(100% - 80px);background-color:red ;}
-
+.a2 main{height:calc(100% - 80px);background-color:red ;}*/
+<!-- 以上写的过于繁琐,直接absolute-->
+  /* div{
+     position:absolute;  //子元素不会定位  
+     width: 25%;
+     height: 100%;
+     top: 0;
+     bottom: 0;
+     border-right:1px solid;
+box-sizing:border-box;  
+   }
+   .a1{left: 0;
+      top: 0;
+       bottom: 0;
+      border-bottom-color: aqua}
+   .a2{left: 25%;}
+   .a3{left: 50%;}
+   .a4{left: 75%;} */
   </style>
 </head>
 <body>
   <div class="wrapper">
     <section class="a1">section</section>
     <section class="a2">
-        <h1>heat</h1>
-        <main>ddfdsf</main>
+        <!-- <h1>heat</h1>
+        <main>ddfdsf</main> -->
     section
     </section>
     <section class="a3">section</section>
