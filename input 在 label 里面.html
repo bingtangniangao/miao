@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    img{
+      user-select: none;
+      /* 无法选中图片 */
+    }
+
+    span{
+      width: 0;
+      height: 0;
+      border :8px solid ;
+      display: inline-block;
+    }
+  input:checked + span{
+      border-color:red;
+  }
+
+  </style> 
+</head>
+<body>
+
+  <label for="a" >
+      <input type="checkbox" id="a">
+      <!-- 之前是一个 input 在外面比较麻烦, 在里面可以 -->
+      <span></span>
+      <!-- 可以在input 里面加 span , 这样就没有改变结构-->
+  </label>
+  <img src="https://i03piccdn.sogoucdn.com/eaa65c9c370290c4" alt="">
+  <!-- 问题:
+    div{
+      width
+      height
+      background-repeat:no-repeat;
+      background-position:5%;  //  这行行的意思是元素的5%对着图片的5%,不是位移5%
+      background-image:URL()
+
+    }
+    -->
+
+    <!-- 问题2
+       div 在常规流中没有设置宽度是可以看见的, 用 position 定位后 没有宽度时看不见的,进可能的小
+       在看到一个元素  :
+         1首先看 display  
+        2  position 
+          w,h
+          3 包含快 
+    -->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    form{
+      /* display: inline-block; */
+      background-image: url(./雪碧图.png);
+      width:100px;
+      height: 100px;
+    }
+      input:checked+form{
+      /* 是checked 不是 checkbox */
+        transition: 1s steps(28);
+       background-position:-2800px 0;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" form="a1">
+  <form id="a1"></form>
+<!-- 应该用 label  不能用form是提交,只能关联,不能选中, 而且元素的位置因为是要选中背景,所以背景要在后面, input 在前面,反过来就无法做动画了.   下一版本,就是不要在连续点击是出现图片滑动,  -->
+  </form>
+  
+</body>
+</html>

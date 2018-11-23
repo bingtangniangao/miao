@@ -7,6 +7,7 @@
   <title>Document</title>
   <style>
  label{
+   cursor: pointer;
     display:inline-block;
     /* 因为input 是行内元素宽高没有用所以要 变 display */
     background-image: url(./雪碧图.png);
@@ -17,16 +18,18 @@
     /* 这么写会有个问题, 鼠标移开时 图片没走完会自动还原, */
    
   }
-  input:checked + label{
+  input:checked ~ label{
     background-image: url(./雪碧图.png);
-    transition:1S steps(28) ;
+    transition:1S steps(28);
     background-position:-2800px 0;
   }
+  
   </style>
 </head>
 <body>
-  <input type="checkbox" id="relevance" hidden>
+    <input type="checkbox" id="relevance" hidden>
   <label for="relevance"></label>
+ 
      
 
 </body>
