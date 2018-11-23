@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    label{
+      display: inline-block;
+      /* 不设置为行没有宽高 */
+      border-radius:999999px;
+    width: 100px;
+    height: 50px;
+    background-color:rgb(112, 107, 107);
+  
+    
+    }
+    /* 第一步 */
+
+    label em{
+      width: 100px;
+      height:50px;
+      display:inline-block;
+      background-color: rgb(112, 107, 107);
+      border-radius:999999px;
+      border:5px solid green;
+    /* 上移动 */
+     position: relative;
+       bottom: 55px;
+       box-sizing: border-box;
+       transition: border 1s 
+    }
+    /* 第4步 */
+    label span{
+      display:inline-block;
+      width: 46px;
+    height: 46px;
+    border-radius: 99999px;
+    background-color:hotpink;
+    margin:2px;
+    position:relative;
+    left:0px;
+    /* 这个有问题 */
+    transition: left 1s;
+    z-index: 2;
+
+     } 
+     /* 第二部 */
+     input:checked + label>span{
+       left: 50px;
+     }
+     /*第3步*/
+     input:checked + label>em{
+       border-width: 25px;
+     }
+
+  </style>
+</head>
+<body>
+ <input type="checkbox" id="a">
+  <label for="a">
+      
+      <span></span>
+      <em></em>
+     
+  </label>
+</body>
+</html>
