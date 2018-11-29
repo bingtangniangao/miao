@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* ol{
+      list-style-type:none;
+      padding:0;
+      width:165px;
+      border:2.5px solid;
+      display: inline-block;
+      xoverflow:hidden;  
+    }
+   
+    li{
+      width:50px;
+      height:50px;
+      float:left;
+      border:2.5px solid;
+      text-align:center;
+    }
+    li:hover{
+      border-color:red;
+      box-shadow:0 0 0  2.5px red;
+      position:relative;
+      z-index: 2;
+    } */
+   /*方法1  除非很重叠才用定位,   阴影会溢出所以用行内块 */
+
+   /* 方法2  */
+     ol{
+      list-style-type:none;
+      padding:0;
+      width:170px;
+      /* border:2.5px solid; */
+      /* display: inline-block; */
+      overflow:hidden;
+      padding:5px;
+
+    }
+   
+    li{
+      width:50px;
+      /* height:50px; */
+      line-height:50px;
+      float:left;
+      border:5px solid;
+      text-align:center;
+      margin-right: -5px;
+      margin-bottom:-5px;
+
+    }
+    li:hover{
+      border-color:red;
+      position:relative;
+      z-index: 2;
+    } 
+
+    .a1 {
+      list-style-type:none;
+      padding:0;
+      width:170px;
+      overflow:hidden;
+      padding:5px;
+    }
+    .a1 > li{display:inline}
+    .a1 > li a{
+border:5px solid;
+float:left;
+width:50px;
+height:50px;
+border:50px;
+margin: 0  -5px -5px 0;
+line-height: 50px;
+text-align:center;
+    }
+    a:hover{
+      border-color: red;
+      position: relative;
+      z-index: 8;
+
+    }
+  </style>
+</head>
+<body>
+  <ol>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ol>
+  <p></p>
+  <p>
+  </p>
+  <ol class="a1">
+      <li><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+      <li><a href="">5</a></li>
+      <li><a href="">6</a></li>
+      <li><a href="">7</a></li>
+      <li><a href="">8</a></li>
+      <li><a href="">9</a></li>
+    </ol>
+</body>
+</html>

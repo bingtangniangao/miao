@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .c {
+      width: 200px;
+      height:500px;
+      bottom: 5px solid;
+      object-fit: contain;
+      /* 撑大 */
+    }
+    div{
+      width:350px;
+      height:350px;
+      line-height: 350px;
+      border:1px solid;
+      /* 图片超出块 */
+     text-align:center;
+     /* 可以使行内块很行居中 */
+     font-size: 0;
+    }
+    div img{
+      /* width:100%; 
+      height: 100% */
+      /* 这么写会撑大到全框架 图片失真*/
+      max-width: 100%;
+      max-height:100%;
+     /* 按照高宽最大优先撑开,会有空白 现在让图片居中 */
+     /* display:inline-block; */
+      /* 行内块和行不能设置 margin */
+        /* display:block; */
+        /* margin:auto; */
+        /* 变成块后, vertical-align 无效 */
+        /* line-height: 250px; */
+        vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+    <!-- <div>
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgSDQkIEhAQEBISGBoQDQwMDRsUFhAWFRgZIhYRFRMkKCggJCYvJxUZIT0tJSs3LjIwIyszODg0Rig5Lz8BCgoKDQwNGg4NGi0lGyUtNy0rKy03LTAtOCs4LTItLS0rKys3OCstKysrLi0rKysrKysrNysrKysrKy0rLSsrK//AABEIADIAMgMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAABgIHAQMEBf/EADIQAAEDAgMDCgYDAAAAAAAAAAEAAgMEEQUSIQYTFBUiMUFTcZKTsdEjVGJygZEkMlH/xAAYAQEBAQEBAAAAAAAAAAAAAAADBAECAP/EACARAAEDAwUBAAAAAAAAAAAAAAABAxESIWECBBMUQTH/2gAMAwEAAhEDEQA/AHW6xdYB1CfbBOuukhbar9EQFTCeLBFgs5cCdbIkFaZQnxwFiq7ilJhhcTcloJJ69EjeuoF1qiLmEKF0JQzpB1CaNq8fjoqZtUWGV73sgp4Q7LvJJDZrS7qHXdKoOoTZtRgFPXUxonudGQ5ssM8ds0UkZux4vopXU+Fe39Bk+NB8Eb20zg8O3j43OG5cGkt5p/sCdL6dyU2bfYhybhmNGGnZxFVwRa+VwbEM72b0u74ye5e27ZWWSvocdmkgdNTsexhipcokc8AB8l3E6W0svLh2Bqm0GGYRxUZFNU8a15pjzznc/dkZ+i7z+LIikacFr3zR1Dy+CQNcWNkpJC9jua0nX/buISHTu+DAPpHorKjhiaHhrWtzc52RtrmwFz+gqypT8KH7R6KnbpdSTdfENt0IQqYJJN2bUJ6OLYb0cRB57fdV+965HUtObnds8AR6maxW3+ObFl8r4Z8xB57fdHK+GfMwee33VZGlpuzZ4Ao8LTdmzwBc9XJ33MFnOxfDLH+TB57fdVxROG6h+0ei0CkpuzZ4AuhtgA0aAdACRtmibhOv8kWOi7VhacywlgEyFEoQtQ8pgqKELo5JBBQheNQihCFhp//Z" alt="">
+      </div> -->
+      <div>
+        <img src="https://i04piccdn.sogoucdn.com/6afb1a3e678f7bb0" alt="">
+      </div>
+      <div>
+        <img src="https://i02piccdn.sogoucdn.com/81dfe5b728926fe8" alt="">
+      </div>
+      
+    <img class="c" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgSDQkIEhAQEBISGBoQDQwMDRsUFhAWFRgZIhYRFRMkKCggJCYvJxUZIT0tJSs3LjIwIyszODg0Rig5Lz8BCgoKDQwNGg4NGi0lGyUtNy0rKy03LTAtOCs4LTItLS0rKys3OCstKysrLi0rKysrKysrNysrKysrKy0rLSsrK//AABEIADIAMgMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAABgIHAQMEBf/EADIQAAEDAgMDCgYDAAAAAAAAAAEAAgMEEQUSIQYTFBUiMUFTcZKTsdEjVGJygZEkMlH/xAAYAQEBAQEBAAAAAAAAAAAAAAADBAECAP/EACARAAEDAwUBAAAAAAAAAAAAAAABAxESIWECBBMUQTH/2gAMAwEAAhEDEQA/AHW6xdYB1CfbBOuukhbar9EQFTCeLBFgs5cCdbIkFaZQnxwFiq7ilJhhcTcloJJ69EjeuoF1qiLmEKF0JQzpB1CaNq8fjoqZtUWGV73sgp4Q7LvJJDZrS7qHXdKoOoTZtRgFPXUxonudGQ5ssM8ds0UkZux4vopXU+Fe39Bk+NB8Eb20zg8O3j43OG5cGkt5p/sCdL6dyU2bfYhybhmNGGnZxFVwRa+VwbEM72b0u74ye5e27ZWWSvocdmkgdNTsexhipcokc8AB8l3E6W0svLh2Bqm0GGYRxUZFNU8a15pjzznc/dkZ+i7z+LIikacFr3zR1Dy+CQNcWNkpJC9jua0nX/buISHTu+DAPpHorKjhiaHhrWtzc52RtrmwFz+gqypT8KH7R6KnbpdSTdfENt0IQqYJJN2bUJ6OLYb0cRB57fdV+965HUtObnds8AR6maxW3+ObFl8r4Z8xB57fdHK+GfMwee33VZGlpuzZ4Ao8LTdmzwBc9XJ33MFnOxfDLH+TB57fdVxROG6h+0ei0CkpuzZ4AuhtgA0aAdACRtmibhOv8kWOi7VhacywlgEyFEoQtQ8pgqKELo5JBBQheNQihCFhp//Z" alt="">
+</body>
+</html>
