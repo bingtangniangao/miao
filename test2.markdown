@@ -8,53 +8,51 @@
 
 01. 用文字描述如下选择器将选择哪些（个）元素
     ```css
-    div, h1 {}
-    div[class] [id="abc"] {}
-    div:hover ul li > div {}
-    body :active {}
-    div:hover::after {}
-    ::selection {}
+    div, h1 {} 0002
+    div[class] [id="abc"] {}0021
+    div:hover ul li > div {}0014
+    body :active {}0011
+    div:hover::after {}0021
+    ::selection {} 
     :target {}
     input + ul + p ~ span {}
     ```
 	答:  div 和 h1
 	  	 元素为 abd 的标签
 	    当选中 div 时,的后代元素 ul 的后代元素 li 的子元素 div
-	    标签被激活时
+	    标签被激活时 鼠标按下为松开手时 
 	    在 div 后面添加元素
-	    鼠标选中时
-	    当页面调转时
+	    鼠标选中时 只能设置 前景色和背景色
+	     选中 id 为 地址栏中#后面的元素
 	    input 的相邻 ul 的相邻 p 的普通兄弟 span
+	    
+	    伪类就是实实在在的元素, 伪元素就不是了, 伪元素后面只能是文字,不能有其他标签或类 ,* {}是直接选不中active的,  可以写成* :active{}
 02. 分别写出如下几个选择器的优先级
     ```css
-    * * * {}
-    div * span {}
-    div[title] {}
-    fieldset legend + input {}
-    #some #thing .not:hover .abc:hover {}
+    * * * {} 0000
+    div * span {} 0002
+    div[title] {}0011
+    fieldset legend + input {} 0003
+    #some  #thing .not:hover .abc:hover {}     0240
     ```
-  	div[title]>
- 	 #thing .not:hover .abc:hover {}
- 	 #some
-    fieldset legend + input {} 
-    div * span {} 
-     * * * {}
+  	
 03. https://www.example.com/a/b/ 页面中有如下代码
     ```html
     <link rel="stylesheet" href="//test.example.com/path/../the/../path/c.css">
     ```
     请问最终引入的c.css的完整路径是什么？
-     <link rel="stylesheet" href="//test.example.com/path/c.css"
+     <link rel="stylesheet" href="https://test.example.com/path/c.css"    9.23没听
 04. `em,px,rem,vw,vh` 分别代表多长？
-     px 屏幕的像素
+     px 屏幕的像素 系统分辨率同显示器物理分辨率相同  
      em  相对于父
-     rem 相对于 html
+     rem 相对于 html的字号大小
      vw 视窗宽度，1vw等于视窗宽度的1%。
      vh：viewpoint height，视窗高度，1vh等于视窗高度的1%。
-
+	  VMAX VW与 vh 的 jiaodaze
+	  vimin  vmyu vh 的教下者
 05. 显示器的物理分辨率为 `1920x1080`，操作系统设置的分辨率为 `1280x720`，网页的放大倍数为 `110%`，请计算一个 CSS 像素对应多少个显示器物理像素（面积与长度）？
-
-	
+    长度:110* (1920/1280 )
+    面积 1.65*1.65	
 06. 写出如下代码显示在浏览器后**每个单词**的字号
     ```html
     <style>
@@ -83,20 +81,24 @@
       </section>
     </body>
     ```
-    h2  200px
+    h2  200px  300px 要先看在浏览器中是多大
     p  24px
     over  24*150%  ; lazyy  53px;  dog 36px
     
-07. 字体的 italic 与 obsolete 的区别是？
-		都是字体倾斜  当  obsolete 是文字物理倾斜, italic 是一种字体
+07. 字体的 italic 与 oblique 的区别是？
+		都是字体倾斜  当  oblique 是文字物理倾斜, italic 是一种字体  obsolete 废弃
 08. 写出满足如下条件的选择器
     * 第  8个子结点之后，倒数第 5 个子结点之前的li结点
     * 【类名】以“damiao-”开头的元素
     * rel 属性中有 nofollow 这个单词的标签
-    答: nth-child(8)~nth-last-child(5)
+    答:li:nth-child(n+8):nth-last-child(n+5){}
+       class="damiao-desk"
+       class^="damiao-"
+    
 09. 链接伪类的几种状态书写的顺序是什么？为什么？
     a:link
     a:visited
+    focus
     a:hover
     a:active
     link 和 visited 是未激活和激活,不能同时存在
@@ -110,9 +112,12 @@
 11. vertical-align 取 middle 时元素如何对齐？
      居中对齐
 12. 什么是 baseline？
-     基线对齐
+     基线对齐  x 字符的下方为基线  对应汉字来说没有基线  图片的底部就是基线  表单元格的内容在单元格中垂直居中
 13. 详述你对盒模型的理解。
      边距border  外边距margin  内边距padding  内容content
+     
+      padding 可以看到元素的背景 
+     
 14. 如何让一个元素可被 focus？如何去掉其被 focus 时的虚框？
       input{text-indent: 1em;}
  		#search1{ }
@@ -126,6 +131,7 @@
 15. 如何给css添加注释
      <!--  -->
      /*  */
+     x  /
 16. 指出如下css代码中的错误
     ```
     p,h1,{
@@ -140,9 +146,18 @@
     rgba(0,0,0,0)
     colr: #ff0468;
     font: 25px serif;
+    variant
+    color: 可以是 3 位 4位  6位 8位  
 17. 元素的高度写百分比在什么情况下【无效】，为什么？在什么情况下【有效】，有效时是以哪个元素的高度为基准值？
 	  %是相对父元素  , 可以把 html, body 设置为100%;  或者自身设置为 position:fixed,相对于窗口.
+	  为 auto, 父元素有子撑大, 子元素由父决定,形成依赖,逻辑有矛盾
+	  
+	  
+	  
+	  
 18. 解释 box-sizing 可以取哪些值，以及每个值的意义
+  
+
    box-sizing: content-box; 不影响边框和内边距
    box-sizing: border-box;  从边框开始为宽度
 19. 如下结构中，div 有两个伪元素，分别标出伪元素的位置，用 `<before></before>` 表示 `::before` 伪元素，用 `<after></after>` 表示 `::after` 伪元素
@@ -210,21 +225,42 @@ CSS1Compat：标准模式，浏览器使用W3C的标准解析渲染页面。
 这就是<!DOCTYPE html>的作用。
 23. 有一张高为 100 宽为 50 的图片，内有一个直径为 40 的圆，其做为一个 200x200 的元素的背景图片，background-size 为 contain 和 cover 时，圆的直径分别为多少？
 
+ 
+ 
+
+
+
 
 24. 写出实现小米网首页 logo 返回主页的动画效果的代码。
-
-
+    div{
+     width:50px;
+     height:50px;
+     background-imge:url  ,url
+     background-position:00,50px 0;
+              repeat:
+    }
+    
 25. 给出至少 5 种水平垂直居中方案。
 		表格  定位  行内块居中  定位+translate  flex
 
 26. 简述 em 框，内容区，行内框，行框的构成以及其需要注意的问题。
-
+		em 高度是字号 字形是可以高出 em 框
+		内容区为 em 框串起来的内容区
+		行内框 
     
 27. 如何确定一个行内框的baseline及其最高点和最低点？
     
+		inline  
+		 文字的 baseline
+		 行高的最高点和最低点
+		 
+		 其他行内 yuans
+		 最后一行的内容 baseline
+		 margin-box 的上边缘和下边缘
+
 
 28. `td` 元素的 `headers` 属性是干嘛的？
-
+   有助于读屏软件读取单元格的表头                            
       
 29. color 这个属性有什么需要注意的地方？
     边框会继承
@@ -234,6 +270,10 @@ CSS1Compat：标准模式，浏览器使用W3C的标准解析渲染页面。
 		          word-spacing:-6px;
 }
        https://www.zhangxinxu.com/wordpress/2012/04/inline-block-space-remove-%E5%8E%BB%E9%99%A4%E9%97%B4%E8%B7%9D/  
+       
+       从外面看是行内元素  考虑自身位置时 为行内元素, 布局时为块
+       
+       没有内容与有内容 baseline 不一样,自身有 bfc
 31. 什么是 CSS Sprite？为什么要使用 CSS Sprite？它有哪些优缺点？
 
  	  把多个图片 整合到一块减少 服务器请求
@@ -253,7 +293,7 @@ CSS1Compat：标准模式，浏览器使用W3C的标准解析渲染页面。
       <a href="mi.com”>小米网<a>
     </div>
     ```
-    伪元素不能用伪类\透明度是0~1之间\ transition 没有 opactiy\a 没有闭合
+    伪元素 只能在最尾部\透明度是0~1之间\ stps\a 没有闭合\visited 只能改变颜色    \ 引号
 
 33. 如下内容渲染在【同一行】中，请计算那一行的理论行高
     ```html
@@ -305,6 +345,9 @@ CSS1Compat：标准模式，浏览器使用W3C的标准解析渲染页面。
     </body>
     </html>
     ```
+     有内容最后一行内容
+     
+     无内容
 
 34. `vertical-align` 取值为 `baseline` 时在不同情况下分别是如何对齐的？
 
@@ -312,6 +355,8 @@ CSS1Compat：标准模式，浏览器使用W3C的标准解析渲染页面。
 35. 解释常规流与包含块的概念
 
    常规流可以和外界接触 ,包含块不可以
+     如果一个元素没有定位 没有浮动 就是常规流
+     从上到下,从左到右,不会重叠,
 36. 在各种情况下，一个元素的包含块分别是什么？
 
       
@@ -328,9 +373,11 @@ CSS1Compat：标准模式，浏览器使用W3C的标准解析渲染页面。
      
 38. 如何实现单方向的盒子阴影？
     box-shadow
+      模糊,会大于面积
+       扩散半径为负会向内
   
 39. 默写与表格布局相关的 CSS 属性，并说明相关属性的作用
-
+		
     
 40. `visibility:hidden`，`display:none`，`opacity:0`分别有什么不同？
    visibility 还占用空间
@@ -338,19 +385,22 @@ CSS1Compat：标准模式，浏览器使用W3C的标准解析渲染页面。
     opacity     占用空间
 
 41. 当页面中出现表示时间的文字但表意不明确时，比较优雅且富有语义的做法是什么？
-
+   
   
 42. CSS 中一般为何不使用 `cm`，`mm` 等长度单位？
 
      what
 43. 表格布局中各层的层次是？
-
+      从上往下 
+      单元格, 行,行 组,
      
 44. 为什么要在文件的最后一行加一个回车？
-
+       便于后续编辑
+       文件在拼接时更可能不出错
+       diff 信息中不会有额外信息
    
 45. 用 CSS 画出一个半圆形，分别给出实心与空心的的画法。实心和空心分别给出两种方案。
-
+       
     
 46. 表单元素有哪些伪类选择器？
     :enabled 启用状态
@@ -388,6 +438,7 @@ CSS1Compat：标准模式，浏览器使用W3C的标准解析渲染页面。
     background-repeat:no-repeat;
     background-position-bottom:5px;
     background-position-left:3px;
+    background-position:3px calc(100%-5px)                    
 51. 写出创建如下目录结果的命令行脚本（注：有扩展名的为文件，没有扩展名的为文件夹）。
     ```
     a
@@ -408,3 +459,5 @@ CSS1Compat：标准模式，浏览器使用W3C的标准解析渲染页面。
     omit，multiple，驼峰式，中划线式，layout，typo，code review，半径，config，集合，矩形，binary，decimal，十六进制，八进制，SEO，HTML实体，语义化，兼容性，quirk，reference，大小写敏感，别名
     省略  多重  CamelCase     布局  排版 代码  复习  radius 系统配置 gather 
     rectangle  二进制  十进制  hexadecimal  octonary 搜索引擎优化 compatibility  参考  case sensitive  alias
+    
+    

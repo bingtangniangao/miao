@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+     html,body{
+      margin:0;
+      height: 100%;
+    }
+     /* div{
+       height: 100%;
+       width:100%;
+       display:flex; 
+       flex-wrap:wrap;
+       align-content: flex-start;
+       xalign-items: stretch;
+     }
+     header{
+     width:100%;
+     height: 100px;
+     background-color:antiquewhite;
+    }
+    aside{
+      width:100px;
+      height:calc(100% - 100px);
+      background-color:aqua; 
+    }
+    main{
+      flex-grow:1;
+      background-color: blueviolet;
+
+    } */
+    /* div{
+      display: flex;
+      height: 100%;
+      flex-wrap:wrap;
+      align-content: flex-start;
+    }
+    header{
+      width:100%;
+      height:100px;
+      background-color: aqua;
+      
+    }
+    section{
+      display:flex;
+      height:calc(100% - 100px);
+     width: 100%
+    }
+    aside{
+     width:100px;
+     background-color:rgb(21, 216, 21);
+    }
+    main{
+      background-color: blueviolet;
+      flex-grow:1;
+   
+
+    } */
+    div{
+       height: 100%;
+       width:100%;
+       display:flex; 
+       flex-direction: column;
+       flex-wrap:wrap;
+       align-content: flex-start;
+     }
+     header{
+     width:100%;
+     height: 100px;
+     background-color:antiquewhite;
+    }
+    section{
+      display: flex;
+      flex-grow:1
+    }
+   aside{
+     width: 120px;
+     background-color: aqua;
+   }
+   main{
+     background-color: blueviolet;
+     flex-grow: 1;
+   }
+  </style>
+
+  <!-- width 和 height 是会继承的 必须设置 -->
+</head>
+<body>
+  <!-- <div>
+    <header>1</header>
+    <aside>2</aside>
+    <main>3</main>
+  </div> -->
+ <div>
+   <header>1</header>
+   <section>
+       <aside>2</aside>
+        <main>3
+        </main>
+   </section>
+ </div>
+</body>
+</html>

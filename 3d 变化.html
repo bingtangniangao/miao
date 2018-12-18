@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      background-color:rgba(0,0,0,0.09) 
+    }
+    @keyframes spin-3d{
+      from{
+        transform:rotatex(0deg) rotatez(0);
+      }
+      to{
+        transform:rotatex(360deg) rotatez(3600deg);
+      }
+    }
+    section{
+      height:500px;
+      position: relative;
+      transform:perspective(2000px) rotatex(740deg) rotatez(1520deg);
+      transform-style:preserve-3d;
+      transition:2s;
+      animation:spin-3d 20s infinite linear;
+    }
+    div{
+      width:100px;
+      height: 100px;
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      margin:auto;
+    }
+    div:nth-child(1){
+       transform:rotatey(90deg)translateZ(50px); background-color:antiquewhite;}
+      div:nth-child(2){
+      transform:rotatey(-90deg)translateZ(50px); background-color:rgb(5, 214, 68);}
+      div:nth-child(3){
+      transform:rotatex(90deg)translateZ(50px); background-color:rgb(25, 165, 247);}
+      div:nth-child(4){
+      transform:rotatex(-90deg) translateZ(50px); background-color:brown;}
+      div:nth-child(5){
+      transform:rotatey(0deg)translateZ(50px); background-color:blanchedalmond;}
+      div:nth-child(6){
+      transform:rotatey(0deg)translateZ(-50px); background-color:rgb(10, 7, 206);}
+  </style> 
+</head>
+<body>
+  <section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+</body>
+</html>
