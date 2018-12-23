@@ -118,9 +118,380 @@ alert()
 
   console.log(c)
 </script> -->
-<!-- <script id="0103/12">
+<script id="ch0103/12" type="1">
   var a, c
   a = +prompt("请输入半径","4")
+  
   c = (4/3*3.14159*a*a*a).toFixed(2)
+
   console.log(c)
+</script>
+
+1-5-01:求平均年龄
+<script id="01/05/01"type="1">
+var i=0,age=0,n=0,pin=0;
+n=+(prompt("输入学生数","3"));
+while(i<n){
+  age=+(prompt(" 输入年龄",))
+  pin=age+pin;
+  i++;
+}
+console.log((pin/n).toFixed(2))
+</script>
+<script id="01/05/01"type="1">
+  var age,i,n
+  var m=0;
+      n =+(prompt("请输入学生数","3"))
+  for(i=0;i<n;i++){
+    age=Number(prompt("请输入年龄",""))
+    m=age+m;
+  }
+  var d=(m/n).toFixed(2)
+  console.log(d)
+</script>
+
+02:财务管理
+<script id="ch01/05/02" type="2">
+var i,n,money;
+var m=0;
+  n=+(prompt("请输入12个月","12"))
+  for(i=0;i<n;i++){
+    var money=Number(prompt("请输入金额"));
+    console.log(money)
+    m=money+m;
+    console.log(m)
+  }
+  var d=(m/n).toFixed(2);
+  console.log(d)
+</script>
+1-5-03:均值
+<script id="ch01/05/03" type="3">
+  var i ;
+  var n=+(prompt("样本","2"))
+  var num=0;
+  for(i=0;i<n;i++){
+    var data=+(prompt("数据"))
+    var num=data+num
+  }
+  var d=(num/n).toFixed(4)
+  console.log(d)
+</script>
+
+1-5-04:求整数的和与均值
+<script id="ch01/05/04" type="4">
+  var n ,i;
+      n=+(prompt("输入n个","3"))
+  var num=0;
+    for(i=0;i<n;i++){
+      var p=+(prompt("整数"))
+      num=p+num;
+      console.log("p="+p+"num="+num)
+    }
+    var d =num/n.toFixed(5);
+    var g = num;
+    console.log(g,d)
+</script>
+1-5-05:最高的分数
+<script id="ch01/05/05" type="5">
+  var i,n,max=0
+    n=+(prompt("n个数"))
+    for(i=0;i<n;i++){
+      var a=+(prompt("输入一个数1~100"))
+      if(a>max){
+        max=a;
+      }
+      console.log("a="+a+"max"+max)
+    }
+    console.log(max)
+</script>
+1-5-06:整数序列的元素最大跨度值
+<script id="ch0105/06" type="6">
+  var i ,n;
+  var max=0;min=10000;
+    n=+(prompt(" 多少个数啊,6个吧,嘻嘻"))
+  for(i=0;i<n;i++){
+    var x=+(prompt("我最大😝","55"))
+      if(x>max)
+        max=x;
+      if(x<min)
+        min=x;
+  console.log("x="+x+","+"max="+max+","+"min="+min)
+  }
+  var num=max-min;
+  console.log(num)
+</script>
+1-5-07:奥运奖牌计数
+<script id="ch0105/07"type="7">
+  var i ,n;
+    n=+(prompt("你来几天了","3"))
+  var j1=0, y1=0, t1=0;
+    for(i=0;i<n;i++){
+      var j=+(prompt("🏅数"))
+      var y=+(prompt(" 🥈牌数"))
+      var t=+(prompt("🥉牌数"))
+      j1=j+j1
+      1=y+y1
+      t1=t+t1
+      console.log("j="+j1+"y="+y+"t="+t+"t1="+t1+"j1="+j1+"y1="+y1)
+    }
+    console.log(j1,y1,t1,j1+y1+t1)
+</script>
+1-5-09:奇数求和
+<script  id="ch0105/09" type="9">
+  var i ,n,m;
+    m=+(prompt("最小值","7"))
+    n=+(prompt(" 最大值","15"))
+    var num=0;
+  for(i=m;i<=n;i++){
+    if(n>300){
+      console.log("大于300,再见")
+      break
+    } else{
+      console.log(confirm("小于300,请继续输入下一个"))
+    }
+    if(i%2==1){
+      num+=i;
+    console.log("i="+i)
+    }
+  }
+  console.log(num)
+</script>
+1-5-10:满足条件的数累加
+<script id="ch0105/10" type="10">
+  var i,n;
+  i=+(prompt("min","15"))
+  n=+(prompt("max","85"))
+  num=0;
+  for(i;i<=n;i++){
+    if(i<1||n<i||n>1000){
+      console.log(prompt("请审题"));
+      break;
+    }
+    if(i%17==0){
+      num+=i;
+    console.log("i="+i)
+    }
+  }
+  console.log(num)
+</script>
+1-5-11:整数的个数
+<script id="ch0105/11" type="11">
+  var n ,i;
+  n=+(prompt(" 共来几个数"),"5")
+  var x=0,y=0,z=0;
+  for(i=0;i<n;i++){
+    var a=+(prompt("请输入"))
+    console.log("a="+a)
+    if(a==1)
+       x++
+    if(a==5)
+      y++
+    if(a=10)
+      z++
+  }
+  console.log(x+"\n"+y+"\n"+z)
+</script>
+12:与指定数字相同的数的个数
+<script id="ch0105/12" type="12">
+  var i=0 ,n=3,x=0;
+  for(i;i<n;i++){
+    var a=+(prompt("输入232"))
+    console.log("a="+a)
+    if(a==2)
+      x++;
+  }
+  console.log(x)
+</script>
+1-5-13:乘方计算
+<script id="ch0105/13" type="13">
+  var i=0,n=3,num=1;
+  var a=+(prompt("输入 a"))
+  for(i;i<n;i++){
+    num*=a;
+  }
+  console.log(num)
+</script>
+1-5-14:人口增长问题
+<script id="ch0105/14" type="14"> //type="10"
+  var i=0,n=10,x=13;
+  for(i;i<n;i++){
+    x*=1.001;
+  }
+  console.log(x.toFixed(4))
+</script>
+<script id="ch0105/17" type="17" >
+  var k ,i=0,a1=1,a2=1;
+  k=+(prompt("输入k的循环次数","19"))
+  for(i;i<k-2;i++){
+    a=a1+a2;
+    a1=a2;
+    a2=a;
+  }
+  console.log(a)
+</script>
+1-5-18:鸡尾酒疗法
+<script id="ch0105/18" type="18">
+ var n = parseInt(prompt("5次","5"));
+ var a = +prompt("总数")
+ var b = +prompt("有效")
+ var x = b/a
+ for(i=0;i<n-1;i++){
+   a = +(prompt("新总数"))
+   b = +(prompt("新有效"))
+   if(b/a-x>0.05){
+     console.log("better")
+     }else if(x-b/a>0.05){
+         console.log("worse")
+     }else{
+       console.log("same")
+     }
+   }
+</script>
+<script id="ch0105/19" type="19"> 
+    var i ,n;
+    var num=0;
+    n=+prompt("屋顶数","1")
+    for(i=0;i<n;i++){
+      var x=+prompt("x 点")
+      var y=+prompt("y点")
+      var p=+prompt("人数")
+      num+=2*Math.sqrt(x**2+y**2)/50+1.5*p
+    }
+    console.log(Math.ceil(num))
+
+</script>
+
+1-5-20:球弹跳高度的计算
+<script id="ch0105/20" type="20">
+  var i ,n=10;
+  var h=+(prompt("高20","20"))
+  var num=h
+  for(i=0;i<n;i++){
+    h=h/2
+    num=2*h+num
+  }
+  console.log(num,h)
+</script>
+<!-- <script id="ch0105/21" type="21">
+var i ,n;
+var x = +(prompt("随机","5"));
+var n=0
+for(i=0;n!=1;i++){
+  if(n%2==0){
+    n=x/2
+    x=n
+  }else{
+    n=x/3+1
+    x=n
+  }
+  if(n==1){
+    break
+  }
+}
+console.log(x)
+
+// 用 for  i 和 i++ 没用
 </script> -->
+<script id="ch0105/21" type="21">
+var temp=0;
+var n=+(prompt("数字",(5)))
+  while(n!=1){
+    if(n%2!=0){
+      temp=n*3+1;
+      n=temp
+    }else{
+      temp=n/2
+      n=temp;
+    }
+    
+  }
+  console.log(n)
+</script>
+<script type="1">
+var n = +prompt()
+var str = '#'
+var space = ''
+
+for (var i = n - 1; i >= 0; i--) {
+   space = '' //没轮完后要初始化,重点
+  for (var j = 0; j < i; j++) {
+     space += ' '
+  }
+  console.log(space + str)
+  str += '##'
+}
+</script>
+<!-- <script type="22">
+  var n=12,i=0,num=0;
+  for(i;i<n;i++){
+   num=num+300-290
+   if(num>100){
+     x=num
+   }
+  }
+</script> -->
+<!-- <script id="ch0105/24" id="24">
+  var i=0,r=6,a=0,m=30,y=0;
+  for(i;i<r;i++){
+    a=+(prompt("取多少也药"))
+    if(m-a>=0){
+      m=m-a
+    }else{
+      y++
+    }
+  }
+console.log(y)
+
+</script> -->
+<!-- <script type="24">
+  var n=4,i=0;
+  for(i;i<n;i++){
+    var a=+(prompt("sou"))
+    var b=+(prompt("kuo"))
+    if(a<90&&a)
+  } -->
+</script>
+<script id="ch0105/26" type="26">
+  var i=0 ,n=5,a=0,b=0,c=0,d=0,num=0;
+  for(i;i<n;i++){
+    var x=+(prompt("数"))
+    d=x%10;
+    c=(x-d)/10%10;
+    b=(x-d)/10-c
+    a=((x-d)/10-c)%10
+    if(d-a-b-c>0){
+      num++
+    }
+  }
+console.log(num)
+</script>
+<script id="ch0105/28" type="28">
+  var x=+(prompt("任意整数"))
+   while(x>0){
+    s=x%10
+    x=(x-s)/10
+    console.log(s)
+   }
+</script>
+<script id="ch0105/29" type="29">
+  var n=+(prompt("一个数"))
+  var  x=0;
+  var f=""
+  if(n>0){
+    while(n>0){
+    x=n%10
+    n=(n-x)/10
+    f=f+x
+    }
+    console.log(f)
+  }else{
+    n=-n;
+    f="-"
+    while(n>0){
+      x=n%10;
+      n=(n-x)/10;
+      f=f+x
+    }
+     console.log(f)
+  }
+</script>
