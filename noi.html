@@ -328,6 +328,7 @@ var m=0;
     a2=a;
   }
   console.log(a)
+  <!-- b=a+b;a=b-a -->
 </script>
 1-5-18:鸡尾酒疗法
 <script id="ch0105/18" type="18">
@@ -604,7 +605,7 @@ console.log(num)
   }
   console.log((add).toFixed(2))
 </script>
-<script d="ch0105/39" xtype="39">
+<script d="ch0105/39" type="39">
   var n=+prompt("n")
   var num=0
   for(i=0;i<n;i++){
@@ -614,4 +615,178 @@ console.log(num)
   }
 console.log(num)
 </script>
+
+<script id="sort" sample-input="4 1 7" sample-output="1 4 7" comment="输入三个数，把此三个数按升序输出" type="1">
+ 
+  var c=+(prompt("417"))
+  var a=+(prompt("417"))
+  var b=+(prompt("417"))
+  if(c>a){
+    if(c>b){
+      if(a>b){
+        console.log(c,a,b)
+      }else{
+        console.log(c,b,a)
+      }
+    }else{
+        console.log(b,c,a)
+    }
+    }else{
+      if(a>b){
+        if(c>b){
+          console.log(a,c,b)
+        }else{
+          console.log(a,b,c)
+        }
+      }else{
+        console.log(b,a,c)
+      }
+    }
   
+  
+</script>
+
+<!-- <script id="sort" sample-input="4 1 7" sample-output="1 4 7" comment="输入三个数，把此三个数按升序输出" type="1">
+var c=+(prompt("417"))
+var a=+(prompt("417"))
+var b=+(prompt("417"))
+var t=0;
+if(c>a){
+  t=c;
+  c=a;
+  a=t;
+}else if(c>b){
+  t=;
+  a=b;
+  b=t
+}
+
+</script> -->
+
+<!-- 题目：水仙花数。水仙花数是指一个N位的十进制数，其各位数的N次方的和等于它自己。
+如：153 =　1的三次方+5的三次方+3的三次方，则153就是一个水仙花数
+或：1634 =　1的四次方+6的四次方+3的四次方+4的四次方
+因为1634是一个四位数。
+找出100到100000以内所有的水仙花数。 -->
+<script id="narcissistic " sample-input="153" sample-output="YES" comment="判断一个数是否为水仙花数" xtype="1">
+  var n=+prompt()
+  var g=0
+  var num=0
+  var t=n
+  while(n>0){
+    g=n%10
+    n=(n-g)/10
+    num++
+  }
+  console.log("一共循环了"+ num)
+  var x=0;
+  var y=1;
+  var w=0
+for(var i=0;i<num;i++){
+  x = t%10
+  t =  (t-x)/10  
+  var y=1;
+  for(var j=0;j<num;j++){
+     y=y*x;
+  }
+  w=w+y
+  
+}
+console.log(w)
+</script>
+<script id="prime" sample-input="7" sample-output="YES" comment="判断一个数是否为素数" type="prime 1">
+  var n = +prompt()
+  for(var i=2;i<n;i++){
+    if(n%i==0){
+      console.log("no")
+      bread;
+    }else{
+      console.log("yes")
+    }
+  }
+</script>
+
+<script id="lcf&lcm" sample-input="12 9" sample-output="36 3" comment="给定两个数，求它们的最小公倍数和最大公约数" type="lcf&lcm">
+  var a=+prompt("a")
+  var b=+prompt("b")
+  var t
+  var d
+  if(a>b){
+    d=b
+  }else{
+    d=a
+  }
+  for(var i=a;i>=1;i--){
+    if(a%i==0&&b%i==0){
+      t=i
+      console.log("最大公约数"+t)
+      break
+    }
+    
+  }
+  var l
+  if(a>b){
+    l=a
+  }else{
+    l=b
+  }
+  for(j=l;j<=a*b;j++){
+    if(j%a==0 && j%b==0){
+      console.log("最小"+j)
+      break
+    }
+  
+     
+  }
+</script>
+<!-- <script type="1">
+var numDigitHas7 = function(n){
+  while(n > 0){
+    var digit = n % 10
+    if (digit == 7){
+      return true
+    }
+    n = (n - digit) / 10
+  }
+  console.log("12345")
+}
+console.log(numDigitHas7(17))
+</script> -->
+<!-- <script>
+ function box(n){
+   console.log("we")
+  
+  //  console.log("123")
+return 3
+ }
+  // console.log(box())
+ box(4)
+</script> -->
+
+<!-- <script>
+  var factorial = function(n){
+    var result =1
+    for(var i=1;i<=n;i++){
+      result=result*i
+    }
+  }
+</script> -->
+
+<!-- <script>
+  function base(n,x){
+    var result = ""
+    var digit
+    while(n>0){
+      digit = n % x
+      result = digit + result
+      n = (n - digit) / x
+    }
+
+  }
+</script>
+<script>
+var isCompleteNumer =  function(n){
+  var sum = 0
+
+}
+</script> -->
